@@ -41,13 +41,24 @@ app.get("/submit", (req, res) => {
 
 app.post("/submit", (req, res) => {
     if(req.body.title === "" && req.body.body === ""){
-        console.log("update");
+        console.log("Updated tasks");
     }
     else{
         headings.push(req.body.title);
         bodies.push(req.body.body);
         var date = new Date();
-        time.push(date.getHours() + ":" + (date.getMinutes()<10?'0':'') + date.getMinutes() + ", " + date.getDate() + "/" + (date.getMonth()+1) + "/" + date.getFullYear());
+        var hours = date.getHours();
+        var minutes = date.getMinutes();
+
+        // Added 5:30 hours to show correct time in IST
+        minutes = (minutes + 30) % 60;
+        hours = (hours + 5) % 24;
+
+        var currDate = date.getDate();
+        var month = date.getMonth()+1;
+        var year = date.getFullYear();
+
+        time.push(hours + ":" + (minutes<10?'0':'') + minutes + ", " + currDate + "/" + month + "/" + year);
         done.push(0);
     }
     if(typeof(req.body.marker) === "object"){
