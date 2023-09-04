@@ -49,10 +49,22 @@ app.post("/submit", (req, res) => {
         var date = new Date();
         var hours = date.getHours();
         var minutes = date.getMinutes();
+        var meridian = "AM";
+
+        // Adjust UTC to ITC
         hours = (hours + 5) % 24 + (minutes >= 30 ? 1 : 0);
         minutes = (minutes + 30) % 60;
 
-        time.push(hours + ":" + (minutes<10?'0':'') + minutes);
+        // Adjust 12 AM / PM
+        if(hours >= 12){
+            hours -= 12;
+            meridian = "PM";
+        }
+        if(hours === 0){
+            hours = 12;
+        }
+
+        time.push(hours + ":" + (minutes<10?'0':'') + minutes + " " + meridian);
         done.push(0);
     }
     if(typeof(req.body.marker) === "object"){
