@@ -1,7 +1,5 @@
 # To-Do-List-Project
 
-![TodoList Website Logo](public/images/icon.png)
-
 Welcome to the TimeTower - ToDo List repository! This web application is designed to help you manage your tasks, stay organized, and boost your productivity. Whether you're a student, a professional, or just someone looking for a straightforward way to keep track of your to-do list, this website has you covered.
 
 ## Features
@@ -16,7 +14,6 @@ Welcome to the TimeTower - ToDo List repository! This web application is designe
 
 1. Clone this repository to your local machine.
    ```bash![icon](https://github.com/rishabhdas1006/To-Do-List-Project.git)
-
    git clone https://github.com/rishabhdas1006/To-Do-List-Project.git
    ```
 
@@ -55,5 +52,6 @@ We welcome contributions from the open-source community! If you'd like to contri
    ```
 
 5. Open a pull request to the main repository, describing your changes and why they should be merged.
+
 
 Stay organized and boost your productivity with TodoList Website. Start managing your tasks effectively today!
