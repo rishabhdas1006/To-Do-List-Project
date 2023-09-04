@@ -47,7 +47,7 @@ app.post("/submit", (req, res) => {
         headings.push(req.body.title);
         bodies.push(req.body.body);
         var date = new Date();
-        time.push(date.getHours() + ":" + (date.getMinutes()<10?'0':'') + date.getMinutes() + ", " + date.getDate() + "/" + date.getMonth() + "/" + date.getFullYear());
+        time.push(date.getHours() + ":" + (date.getMinutes()<10?'0':'') + date.getMinutes() + ", " + date.getDate() + "/" + (date.getMonth()+1) + "/" + date.getFullYear());
         done.push(0);
     }
     if(typeof(req.body.marker) === "object"){
