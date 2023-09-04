@@ -49,16 +49,10 @@ app.post("/submit", (req, res) => {
         var date = new Date();
         var hours = date.getHours();
         var minutes = date.getMinutes();
-
-        // Added 5:30 hours to show correct time in IST
         hours = (hours + 5) % 24 + (minutes >= 30 ? 1 : 0);
         minutes = (minutes + 30) % 60;
 
-        var currDate = date.getDate();
-        var month = date.getMonth()+1;
-        var year = date.getFullYear();
-
-        time.push(hours + ":" + (minutes<10?'0':'') + minutes + ", " + currDate + "/" + month + "/" + year);
+        time.push(hours + ":" + (minutes<10?'0':'') + minutes);
         done.push(0);
     }
     if(typeof(req.body.marker) === "object"){
