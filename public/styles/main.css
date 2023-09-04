@@ -1,0 +1,98 @@
+@media (min-width: 700px) {
+    .note-box{
+        position: relative;
+        min-width: 600px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.gradient-background-main {
+    background: linear-gradient(300deg, #793FDF, #7091F5, #97FFF4, #FFFD8C);
+    background-size: 180% 180%;
+    animation: gradient-animation 10s ease infinite;
+}
+
+.gradient-background-btn {
+    background: linear-gradient(300deg, #B5D5C5, #B08BBB, #ECA869, #F5F5DC);
+    background-size: 180% 180%;
+    animation: gradient-animation 5s ease infinite;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.cursive-font{
+    font-family: 'Caveat', cursive;
+}
+
+.amatic-font{
+    font-family: 'Amatic SC', cursive;
+}
+
+.nav-btn:hover:focus{
+    color: #FFFD8C !important ;
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 75vh;
+}
+
+.note-box{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.note-area{
+    border-radius: 10px;
+}
+
+.incomplete{
+    background-color: #FFDBAA;
+}
+
+.complete{
+    background-color: #96C291;
+}
+
+.strikethrough:checked + .strike-content{
+    background-color: #96C291;
+    text-decoration:line-through;
+}
+
+.free-btn{
+    color: #ECA869;
+    border-color: #ECA869;
+}
+
+.free-btn:hover{
+    color: black;
+    background-color: #ECA869;
+}
+
+.faq-list{
+    max-width: 1024px;
+}
