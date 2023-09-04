@@ -1,6 +1,6 @@
 # To-Do-List-Project
 
-![TodoList Website Logo](icon.png)
+![TodoList Website Logo](public/images/icon.png)
 
 Welcome to the TimeTower - ToDo List repository! This web application is designed to help you manage your tasks, stay organized, and boost your productivity. Whether you're a student, a professional, or just someone looking for a straightforward way to keep track of your to-do list, this website has you covered.
 
