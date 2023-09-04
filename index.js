@@ -51,8 +51,8 @@ app.post("/submit", (req, res) => {
         var minutes = date.getMinutes();
 
         // Added 5:30 hours to show correct time in IST
+        hours = (hours + 5) % 24 + (minutes >= 30 ? 1 : 0);
         minutes = (minutes + 30) % 60;
-        hours = (hours + 5) % 24;
 
         var currDate = date.getDate();
         var month = date.getMonth()+1;
