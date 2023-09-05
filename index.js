@@ -1,14 +1,19 @@
 import express from "express";
 import bodyParser from "body-parser";
+import morgan from "morgan";
 import favicon from "serve-favicon";
 import path from "path";
+import { dirname } from "path";
+import { fileURLToPath } from "url";
 
+const __dirname=dirname(fileURLToPath(import.meta.url));
 const port = 3000;
 const app = express();
 
 app.use(express.static("public"));
-
+app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')))
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(morgan("dev"));
 
 var headings = [];
 var bodies = [];
@@ -17,6 +22,7 @@ var done = [];
 
 
 app.get("/", (req, res) => {
+    console.log("New session started");
     headings = [];
     bodies = [];
     time = [];
