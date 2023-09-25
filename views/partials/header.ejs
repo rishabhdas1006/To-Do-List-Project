@@ -27,11 +27,11 @@
                 </span>
 
                 <ul class="nav flex-sm-row col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                    <li><a href="/submit" class="nav-link px-2 text-secondary nav-btn">Home</a></li>
-                    <li><a href="/features" class="nav-link px-2 text-white nav-btn">Features</a></li>
-                    <li><a href="/pricing" class="nav-link px-2 text-white nav-btn">Pricing</a></li>
-                    <li><a href="/faq" class="nav-link px-2 text-white nav-btn">FAQs</a></li>
-                    <li><a href="/about" class="nav-link px-2 text-white nav-btn">About</a></li>
+                    <li><a href="/submit" class="nav-link px-2 nav-btn <%= notePage==="home" ? "text-secondary" : "text-white"  %>">Home</a></li>
+                    <li><a href="/features" class="nav-link px-2 nav-btn <%= notePage==="features" ? "text-secondary" : "text-white"  %>">Features</a></li>
+                    <li><a href="/pricing" class="nav-link px-2 nav-btn <%= notePage==="pricing" ? "text-secondary" : "text-white"  %>">Pricing</a></li>
+                    <li><a href="/faq" class="nav-link px-2 nav-btn <%= notePage==="faq" ? "text-secondary" : "text-white"  %>">FAQs</a></li>
+                    <li><a href="/about" class="nav-link px-2 nav-btn <%= notePage==="about" ? "text-secondary" : "text-white"  %>">About</a></li>
                 </ul>
             </div>
         </div>
