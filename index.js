@@ -27,21 +27,25 @@ app.get("/", (req, res) => {
     bodies = [];
     time = [];
     done = [];
+    var page = "home";
     res.render("index.ejs", {
         noteHeadings: headings,
         noteBodies: bodies,
         noteTime: time,
-        noteDone: done
+        noteDone: done,
+        notePage: page
     });
 });
 
 app.get("/submit", (req, res) => {
     // console.log("OK");
+    var page = "home";
     res.render("index.ejs", {
         noteHeadings: headings,
         noteBodies: bodies,
         noteTime: time,
-        noteDone: done
+        noteDone: done,
+        notePage: page
     });
 });
 
@@ -82,23 +86,38 @@ app.post("/submit", (req, res) => {
         done[(Number)(req.body.marker)] = 1;
     }
     // console.log(req.body);
-    res.redirect("/submit");
+    var page = "home";
+    res.redirect("/submit", {
+        notePage: page
+    });
 });
 
 app.get("/features", (req, res) => {
-    res.render("features.ejs");
+    var page = "features";
+    res.render("features.ejs", {
+        notePage: page
+    });
 });
 
 app.get("/pricing", (req, res) => {
-    res.render("pricing.ejs");
+    var page = "pricing";
+    res.render("pricing.ejs", {
+        notePage: page
+    });
 });
 
 app.get("/faq", (req, res) => {
-    res.render("faq.ejs");
+    var page = "faq";
+    res.render("faq.ejs", {
+        notePage: page
+    });
 });
 
 app.get("/about", (req, res) => {
-    res.render("about.ejs");
+    var page = "about";
+    res.render("about.ejs", {
+        notePage: page
+    });
 });
 
 app.listen(port, () => {
