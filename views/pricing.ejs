@@ -9,7 +9,7 @@
         <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
             <div class="col">
                 <div class="card mb-4 rounded-3 shadow-sm">
-                    <div class="card-header py-3">
+                    <div class="card-header basic-plan py-3">
                         <h4 class="my-0 fw-normal">Basic Plan</h4>
                     </div>
                     <div class="card-body">
@@ -20,13 +20,15 @@
                             <li>Basic Reminders</li>
                             <li>Limited Collaboration (Share up to 3 lists)</li>
                         </ul>
-                        <button type="button" class="w-100 btn btn-lg free-btn">Sign up for free</button>
+                        <a href="/signup">
+                            <button type="button" class="w-100 btn btn-lg free-btn">Sign up for free</button>
+                        </a>
                     </div>
                 </div>
             </div>
             <div class="col">
                 <div class="card mb-4 rounded-3 shadow-sm">
-                    <div class="card-header py-3">
+                    <div class="card-header pro-plan py-3">
                         <h4 class="my-0 fw-normal">Pro Plan</h4>
                     </div>
                     <div class="card-body">
@@ -38,13 +40,15 @@
                             <li>Task History Tracking</li>
                             <li>Offline Access</li>
                         </ul>
-                        <button type="button" class="w-100 btn btn-lg" style="background-color: #ECA869;">Get started</button>
+                        <form method="post" action="/checkout">
+                            <button type="submit" name="plan" value="1" class="w-100 btn btn-lg" style="background-color: #ECA869;">Get started</button>
+                        </form>
                     </div>
                 </div>
             </div>
             <div class="col">
                 <div class="card mb-4 rounded-3 shadow-sm border-warning">
-                    <div class="card-header py-3 gradient-background-btn border-warning">
+                    <div class="card-header py-3 premium-plan border-warning">
                         <h4 class="my-0 fw-normal">Premium Plan</h4>
                     </div>
                     <div class="card-body">
@@ -56,7 +60,9 @@
                             <li>File Attachments to Tasks</li>
                             <li>Customer Support Priority Access</li>
                         </ul>
-                        <button type="button" class="w-100 btn btn-lg gradient-background-btn">Contact us</button>
+                        <form method="post" action="/checkout">
+                            <button type="submit" name="plan" value="2" class="w-100 btn btn-lg premium-plan">Contact us</button>
+                        </form>
                     </div>
                 </div>
             </div>

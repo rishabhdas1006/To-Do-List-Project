@@ -5,7 +5,17 @@
             Welcome to TimeTower. Effortlessly Achieve Your Daily Goals with the Ultimate Todo List App!
         </div>
 
-        <div class="d-flex flex-column flex-md-row p-4 gap-4 py-5 m-2 align-items-center justify-content-center gradient-background-btn note-area">
+        <div class="d-flex flex-column flex-md-row p-4 gap-4 py-5 m-2 align-items-center justify-content-center 
+        <% if(planIndex === 0) {%>
+            basic-plan
+        <% } %>
+        <% if(planIndex === 1) {%>
+            pro-plan
+        <% } %>
+        <% if(planIndex === 2) {%>
+            premium-plan
+        <% } %>
+        note-area">
             <form action="/submit" method="post">
                 <div class="list-group">
 
