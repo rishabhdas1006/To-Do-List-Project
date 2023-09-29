@@ -21,18 +21,18 @@
                                     <%= planList[selectedPlanIndex] %>
                                 </h6>
                             </div>
-                            <span class="text-body-secondary">$<%= planPriceList[selectedPlanIndex] %></span>
+                            <span class="text-body-secondary">$ <%= planPriceList[selectedPlanIndex] %></span>
                         </li>
                         <li class="list-group-item d-flex justify-content-between bg-body-tertiary">
                             <div class="text-success">
                                 <h6 class="my-0">Promo code</h6>
                                 <small>NEWUSER</small>
                             </div>
-                            <span class="text-success">−$0.99</span>
+                            <span class="text-success">−$ 2.00</span>
                         </li>
                         <li class="list-group-item d-flex justify-content-between">
                             <span>Total (USD)</span>
-                            <strong>$<%= (planPriceList[selectedPlanIndex] - 0.99).toFixed(2); %></strong>
+                            <strong>$ <%= (planPriceList[selectedPlanIndex] - 2.00).toFixed(2); %></strong>
                         </li>
                     </ul>
                 </div>
@@ -56,17 +56,17 @@
                                 <label for="username" class="form-label">Username</label>
                                 <div class="input-group has-validation">
                                     <span class="input-group-text">@</span>
-                                    <input type="text" class="form-control" id="username" placeholder="Username"
+                                    <input type="text" class="form-control" id="username" placeholder="username"
                                         required="">
                                 </div>
                             </div>
 
-                            <div class="col-12">
+                            <div class="col-md-8">
                                 <label for="email" class="form-label">Email</label>
                                 <input type="email" class="form-control" id="email" placeholder="me@gmail.com">
                             </div>
 
-                            <div class="col-md-5">
+                            <div class="col-md-4">
                                 <label for="country" class="form-label">Country</label>
                                 <select class="form-select" id="country" required="">
                                     <option value="">Choose...</option>
@@ -76,16 +76,6 @@
                                         </option>
                                     <% } %>
                                 </select>
-                            </div>
-
-                            <div class="col-md-4">
-                                <label for="state" class="form-label">State</label>
-                                <input type="text" class="form-control" id="state" placeholder="" required="">
-                            </div>
-
-                            <div class="col-md-3">
-                                <label for="zip" class="form-label">Zip</label>
-                                <input type="text" class="form-control" id="zip" placeholder="" required="">
                             </div>
                         </div>
 
@@ -120,8 +110,7 @@
 
                             <div class="col-md-3">
                                 <label for="cc-expiration" class="form-label">Expiry Date</label>
-                                <input type="text" class="form-control" id="cc-expiration" placeholder="DD-MM-YYYY" onfocus="(this.type='date')"
-                                onblur="(this.type='text')" required="">
+                                <input type="date" class="form-control" id="cc-expiration" placeholder="DD-MM-YYYY" required="">
                             </div>
 
                             <div class="col-md-3">
