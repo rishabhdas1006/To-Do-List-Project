@@ -40,10 +40,20 @@
     animation: gradient-animation 5s ease infinite;
 }
 
+.pro-plan:hover {
+    color: black;
+    text-decoration: none;
+}
+
 .premium-plan {
     background: linear-gradient(300deg, #461959, #7A316F, #CD6688, #AED8CC);
     background-size: 180% 180%;
     animation: gradient-animation 5s ease infinite;
+}
+
+.premium-plan:hover {
+    color: black;
+    text-decoration: none;
 }
 
 *{
@@ -104,6 +114,7 @@ section{
 .free-btn:hover{
     color: black;
     background-color: #E48586;
+    text-decoration: none;
 }
 
 .faq-list{

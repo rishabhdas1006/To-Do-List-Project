@@ -197,9 +197,7 @@ app.post("/checkout", (req, res) => {
 
 app.post("/confirm", (req,res) => {
     var page = "pricing";
-    console.log(req.body);
     plan = req.body.plan - '0';
-    console.log(plan);
     res.render("confirm.ejs", {
         notePage: page,
         userSignedUp: userSignedIn,
