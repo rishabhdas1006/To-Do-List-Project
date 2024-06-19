@@ -53,5 +53,8 @@ We welcome contributions from the open-source community! If you'd like to contri
 
 5. Open a pull request to the main repository, describing your changes and why they should be merged.
 
+## Contact
+For any questions or feedback, please contact prin100603@gmail.com
+
 
 Stay organized and boost your productivity with TodoList Website. Start managing your tasks effectively today!
